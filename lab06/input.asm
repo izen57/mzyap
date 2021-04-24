@@ -24,16 +24,10 @@ code segment public 'code'
 				sub cl, 7
 				not_hex:
 					sub cl, '0'
-				; mov cx, 5
-				; mov si, 4
-				; loop1:
-				; 	mov cl, signed_dec_number[si]
 
 				sal bx, 1 ; арифметический сдвиг влево
-				; mov ax, bx
 				sal bx, 1 ; эквивалентно
 				sal bx, 1 ; умножению
-				; add bx, ax
 				sal bx, 1 ; на 2^4 (16)
 				xor ch, ch
 				add bx, cx ; складываю разряды

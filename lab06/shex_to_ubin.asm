@@ -8,7 +8,6 @@ code segment public 'code'
 		cmp dl, 1
 		mov si, 16 ; для записи в переменную
 		jne pos
-		; neg ax
 		pos:
 			dec si
 			mov dx, ax ; готовлю буфер
