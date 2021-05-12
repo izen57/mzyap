@@ -28,14 +28,14 @@ int main(void)
 	std::cout <<  "String lenght: " << get_string_lenght(str) << std::endl;
 	char check[] = "abcdefghijklmnopqrstuvwxyz";
 	std::cout << "Test: Destination = Source + 3, copysize: 5\n";
-    std::cout << "Start: " << check << std::endl;
-    my_strncpy(check + 3, check, 5);
-    std::cout << "Mine:  " << check << std::endl;
+	std::cout << "Start: " << check << std::endl;
+	my_strncpy(check + 3, check, 5);
+	std::cout << "Mine:  " << check << std::endl;
 
-    std::cout << "Test 2: Source = Destination + 2, copysize: 2\n";
-    std::cout << "Start: " << check << std::endl;
-    my_strncpy(check, check + 2, 2);
-    std::cout << "Mine:  " << check << std::endl;
+	std::cout << "Test 2: Source = Destination + 2, copysize: 2\n";
+	std::cout << "Start: " << check << std::endl;
+	my_strncpy(check, check + 2, 2);
+	std::cout << "Mine:  " << check << std::endl;
 
 	return 0;
 }
