@@ -9,22 +9,23 @@ code segment public 'code'
 		cmp bx, signed_number
 		jns calc ; проверка на знак
 		mov dl, '-'
-		mov ah, 2
+		mov ah, 2 ; вывожу минус
 		int 21h
-		neg signed_number
+		neg signed_number ; перевожу число в доп. код
 
 		calc:
 			mov ax, signed_number
 			xor dl, dl
-			mov si, 4
+			mov si, 4 ; максимум 5 цифр
 			get_dec:
 				xor dx, dx
-				div osn
-				mov signed_dec_number[si], dl
+				div osn ; делю число в ax на основание с. с. (10)
+				mov signed_dec_number[si], dl ; записываю в память последнюю цифру
 				dec si
-				cmp ax, 0
+				cmp ax, 0 ; цикл длится пока ax не равен нулю
 				jne get_dec
 
+		; вывод десятичного числа
 		mov cx, 5
 		xor si, si
 		mov ah, 2
