@@ -75,7 +75,6 @@ int main()
 	float af = 12312, bf = 12312;
 	long double ald = 132314242, bld = 132314242;
 
-	clock_t start = clock();
 	auto begin = std::chrono::steady_clock::now();
 	for (int i = 0; i < 100000; ++i)
 		a *= b;
